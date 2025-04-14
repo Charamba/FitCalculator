@@ -8,6 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
+      <p className="text-2xl font-bold">Última atualização: 14/04/2025 </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -88,6 +89,5 @@ function IMCCalculator() {
         </div>
       )}
     </div>
-  <p className="text-md mt-2 font-medium">Última atualização: 14/04/2025 </p>
   );
 }

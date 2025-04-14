@@ -45,7 +45,7 @@ function IMCCalculator() {
     setStatus(getIMCStatus(valorIMC));
   }
 
-  function getIMCStatus(imc) {
+  function getIMCStatus(valorIMC) {
     if (valorIMC >= 40.0) setStatus("Obesidade grau 3 🚨");
     else if (valorIMC >= 35.0) setStatus("Obesidade grau 2 🚨");
     else if (valorIMC >= 30.0) setStatus("Obesidade grau 1 🚨");
@@ -85,8 +85,8 @@ function IMCCalculator() {
         <div className="text-center">
           <h3 className="text-lg font-semibold">Seu IMC é:</h3>
           <p className="text-2xl font-bold">{imc} kg/m²</p>
-          // <p className="text-md mt-2 font-medium">Status: {status}</p>
-          <p className="text-2xl font-medium">Status: {status}</p>
+          <p className="text-md mt-2 font-medium">Status: {status}</p>
+          //<p className="text-2xl font-medium">Status: {status}</p>
         </div>
       )}
     </div>

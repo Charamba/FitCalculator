@@ -45,11 +45,11 @@ function IMCCalculator() {
   }
 
   function getIMCStatus(imc) {
-    if (valorIMC >= 40.0) return setStatus("Obesidade grau 3 🚨");
-    else if (valorIMC >= 35.0) return setStatus("Obesidade grau 2 🚨");
-    else if (valorIMC >= 30.0) return setStatus("Obesidade grau 1 🚨");
-    else if (valorIMC >= 25.0) return setStatus("Sobrepeso ⚠️");
-    else if (valorIMC >= 18.5) return setStatus("Normal ✅");
+    if (valorIMC >= 40.0) setStatus("Obesidade grau 3 🚨");
+    else if (valorIMC >= 35.0) setStatus("Obesidade grau 2 🚨");
+    else if (valorIMC >= 30.0) setStatus("Obesidade grau 1 🚨");
+    else if (valorIMC >= 25.0) setStatus("Sobrepeso ⚠️");
+    else if (valorIMC >= 18.5) setStatus("Normal ✅");
     else return setStatus("Abaixo do normal ⚠️");
   }
 

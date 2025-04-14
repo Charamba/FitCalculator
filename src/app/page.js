@@ -37,12 +37,12 @@ function IMCCalculator() {
   const [peso, setPeso] = useState(70);
   const [altura, setAltura] = useState(1.75);
   const [imc, setIMC] = useState(null);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState(null);
 
   function calcularIMC() {
     const valorIMC = peso / (altura * altura);
     setIMC(valorIMC.toFixed(2));
-    setStatus(getIMCStatus(valorIMC));
+    setStatus(getIMCStatus(valorIMC.toFixed(2)));
   }
 
   function getIMCStatus(valorIMC) {

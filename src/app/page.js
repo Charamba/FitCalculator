@@ -85,7 +85,8 @@ function IMCCalculator() {
         <div className="text-center">
           <h3 className="text-lg font-semibold">Seu IMC é:</h3>
           <p className="text-2xl font-bold">{imc} kg/m²</p>
-          <p className="text-md mt-2 font-medium">Status: {status}</p>
+          // <p className="text-md mt-2 font-medium">Status: {status}</p>
+          <p className="text-2xl font-medium">Status: {status}</p>
         </div>
       )}
     </div>

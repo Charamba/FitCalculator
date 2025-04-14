@@ -42,7 +42,7 @@ function IMCCalculator() {
   function calcularIMC() {
     const valorIMC = peso / (altura * altura);
     setIMC(valorIMC.toFixed(2));
-    setStatus(getIMCStatus(valorIMC.toFixed(2)));
+    getIMCStatus(valorIMC.toFixed(2));
   }
 
   function getIMCStatus(valorIMC) {
@@ -51,7 +51,7 @@ function IMCCalculator() {
     else if (valorIMC >= 30.0) setStatus("Obesidade grau 1 🚨");
     else if (valorIMC >= 25.0) setStatus("Sobrepeso ⚠️");
     else if (valorIMC >= 18.5) setStatus("Normal ✅");
-    else return setStatus("Abaixo do normal ⚠️");
+    else setStatus("Abaixo do normal ⚠️");
   }
 
   return (

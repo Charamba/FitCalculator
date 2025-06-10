@@ -94,8 +94,7 @@ function IMCCalculator() {
   );
 }
 
-
-export default function CalculadoraGET() {
+function CalculadoraGET() {
   const [sexo, setSexo] = useState('Homem');
   const [peso, setPeso] = useState('');
   const [altura, setAltura] = useState('');

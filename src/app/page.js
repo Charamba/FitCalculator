@@ -29,6 +29,7 @@ export default function FitCalculator() {
         ))}
       </div>
       <div className="w-full max-w-lg">{tab === "IMC" && <IMCCalculator />}</div>
+      <div className="w-full max-w-lg">{tab === "Gasto Energético" && <IMCCalculator />}</div>
     </div>
   );
 }

@@ -148,33 +148,43 @@ function CalculadoraGET() {
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <label className="block">
+        <div className="flex flex-col w-full">
+          <label className="block">
           Sexo:
+          </label>
           <select className="w-full border p-2" value={sexo} onChange={(e) => setSexo(e.target.value)}>
             <option>Homem</option>
             <option>Mulher</option>
           </select>
-        </label>
+        </div>
 
-        <label className="block">
-          Peso (kg):                                          
+        <div className="flex flex-col w-full">
+          <label className="text-sm font-semibold">
+          Peso (kg):
+          </label>                                        
           <input type="number" min="10" max="300" step="0.1" className="border p-2 rounded-md" value={peso} onChange={(e) => setPeso(e.target.value)} />
-        </label>
+        </div>
 
-        <label className="block">
+        <div className="flex flex-col w-full">
+          <label className="text-sm font-semibold">
           Altura (m):
+          </label>
           <input type="number" min="0.5" max="2.5" step="0.01" className="border p-2 rounded-md" value={altura} onChange={(e) => setAltura(e.target.value)} />
-        </label>
+        </div>
 
-        <label className="block">
+        <div className="flex flex-col w-full">
+          <label className="text-sm font-semibold">
           Idade:
+          </label>
           <input type="number" min="10" max="120" step="1" className="border p-2 rounded-md" value={idade} onChange={(e) => setIdade(e.target.value)} />
-        </label>
+        </div>
 
-        <label className="block">
+        <div className="flex flex-col w-full">
+          <label className="text-sm font-semibold">
           <p className="mb-4">
           Nível de Atividade Física:
           </p>
+          </label>
 
           <p className="mb-4">
           🛋️ Sedentário (pouco ou nenhum exercício): TMB × 1.2 </p>
@@ -194,7 +204,8 @@ function CalculadoraGET() {
             <option>Muito ativo</option>
             <option>Extremamente ativo</option>
           </select>
-        </label>
+        
+        </div>
                                         
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg">Calcular Gasto Energético</button>
       </form>

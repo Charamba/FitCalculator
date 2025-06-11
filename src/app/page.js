@@ -149,10 +149,10 @@ function CalculadoraGET() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col w-full">
-          <label className="block">
+          <label className="text-sm font-semibold">
           Sexo:
           </label>
-          <select className="w-full border p-2" value={sexo} onChange={(e) => setSexo(e.target.value)}>
+          <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
             <option>Homem</option>
             <option>Mulher</option>
           </select>
@@ -186,15 +186,15 @@ function CalculadoraGET() {
           </p>
           </label>
 
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
           🛋️ Sedentário (pouco ou nenhum exercício): TMB × 1.2 </p>
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
           🚶 Levemente ativo (exercício leve 1-3 dias/semana): TMB × 1.375 </p>
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
           🏃 Moderadamente ativo (exercício moderado 3-5 dias/semana): TMB × 1.55 </p>
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
           🏋️ Muito ativo (exercício intenso 6-7 dias/semana): TMB × 1.725 </p>
-          <p className="mb-4">
+          <p className="mb-4 font-semibold">
           🏆 Extremamente ativo (atletas ou trabalho físico intenso): TMB × 1.9 </p>
           
           <select className="border p-2 rounded-md" value={atividade} onChange={(e) => setAtividade(e.target.value)}>

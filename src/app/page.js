@@ -1,3 +1,4 @@
+"use client";  // <- Adicione esta linha
 import { useState } from "react";
 
 export default function Home() {

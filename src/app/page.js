@@ -139,7 +139,7 @@ function CalculadoraGET() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h1 className="text-2xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h1>
 
       <h2 className="text-xl font-semibold">🔥 Taxa Metabólica Basal (TMB)</h2>
@@ -172,14 +172,21 @@ function CalculadoraGET() {
         </label>
 
         <label className="block">
+          <p className="mb-4">
           Nível de Atividade Física:
+          </p>
 
-          🛋️ Sedentário (pouco ou nenhum exercício): TMB × 1.2
-          🚶 Levemente ativo (exercício leve 1-3 dias/semana): TMB × 1.375
-          🏃 Moderadamente ativo (exercício moderado 3-5 dias/semana): TMB × 1.55
-          🏋️ Muito ativo (exercício intenso 6-7 dias/semana): TMB × 1.725
-          🏆 Extremamente ativo (atletas ou trabalho físico intenso): TMB × 1.9
-
+          <p className="mb-4">
+          🛋️ Sedentário (pouco ou nenhum exercício): TMB × 1.2 </p>
+          <p className="mb-4">
+          🚶 Levemente ativo (exercício leve 1-3 dias/semana): TMB × 1.375 </p>
+          <p className="mb-4">
+          🏃 Moderadamente ativo (exercício moderado 3-5 dias/semana): TMB × 1.55 </p>
+          <p className="mb-4">
+          🏋️ Muito ativo (exercício intenso 6-7 dias/semana): TMB × 1.725 </p>
+          <p className="mb-4">
+          🏆 Extremamente ativo (atletas ou trabalho físico intenso): TMB × 1.9 </p>
+          
           <select className="border p-2 rounded-md" value={atividade} onChange={(e) => setAtividade(e.target.value)}>
             <option>Sedentário</option>
             <option>Levemente ativo</option>

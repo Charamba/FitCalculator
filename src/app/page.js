@@ -58,6 +58,9 @@ function IMCCalculator() {
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h2 className="text-xl font-bold">📏 Calculadora de IMC</h2>
+      <p className="text-xl">
+        O <strong>Índice de Massa Corporal (IMC) </strong>, é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
+      </p>
       <div className="flex flex-col w-full">
         <label className="text-sm font-semibold">Peso (kg)</label>
         <input
@@ -143,7 +146,7 @@ function CalculadoraGET() {
       <h1 className="text-2xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h1>
 
       <h2 className="text-xl font-semibold">🔥 Taxa Metabólica Basal (TMB)</h2>
-      <p className="mb-4">
+      <p className="text-xl">
         A <strong>Taxa Metabólica Basal (TMB)</strong> é a quantidade mínima de energia que o corpo precisa para manter as funções vitais em repouso, como respiração, circulação e temperatura corporal.
       </p>
 
@@ -186,16 +189,16 @@ function CalculadoraGET() {
           </p>
           </label>
 
-          <p className="mb-4 font-semibold">
-          🛋️ Sedentário (pouco ou nenhum exercício): TMB × 1.2 </p>
-          <p className="mb-4 font-semibold">
-          🚶 Levemente ativo (exercício leve 1-3 dias/semana): TMB × 1.375 </p>
-          <p className="mb-4 font-semibold">
-          🏃 Moderadamente ativo (exercício moderado 3-5 dias/semana): TMB × 1.55 </p>
-          <p className="mb-4 font-semibold">
-          🏋️ Muito ativo (exercício intenso 6-7 dias/semana): TMB × 1.725 </p>
-          <p className="mb-4 font-semibold">
-          🏆 Extremamente ativo (atletas ou trabalho físico intenso): TMB × 1.9 </p>
+          <p className="mb-4">
+          🛋️ <strong>Sedentário</strong> (pouco ou nenhum exercício): TMB × 1.2 </p>
+          <p className="mb-4">
+          🚶 <strong>Levemente ativo</strong> (exercício leve 1-3 dias/semana): TMB × 1.375 </p>
+          <p className="mb-4">
+          🏃 <strong>Moderadamente ativo</strong> (exercício moderado 3-5 dias/semana): TMB × 1.55 </p>
+          <p className="mb-4">
+          🏋️ <strong>Muito ativo</strong> (exercício intenso 6-7 dias/semana): TMB × 1.725 </p>
+          <p className="mb-4">
+          🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </p>
           
           <select className="border p-2 rounded-md" value={atividade} onChange={(e) => setAtividade(e.target.value)}>
             <option>Sedentário</option>
@@ -206,8 +209,8 @@ function CalculadoraGET() {
           </select>
         
         </div>
-                                        
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg">Calcular Gasto Energético</button>
+                     
+        <button type="submit" className="text-center">Calcular Gasto Energético</button>
       </form>
 
       {resultado && (

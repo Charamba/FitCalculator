@@ -210,7 +210,9 @@ function CalculadoraGET() {
         
         </div>
                      
-        <button type="submit" className="text-center">Calcular Gasto Energético</button>
+        <button type="submit" className="text-center bg-blue-500 text-white px-4 py-2 rounded-lg">
+          Calcular Gasto Energético
+        </button>
       </form>
 
       {resultado && (

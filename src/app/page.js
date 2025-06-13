@@ -209,10 +209,12 @@ function CalculadoraGET() {
           </select>
         
         </div>
-                     
+
+      <div className="items-center">    
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg">
         Calcular Gasto Energético
       </button>
+      </div> 
       </form>
 
       {resultado && (

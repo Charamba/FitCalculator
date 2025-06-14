@@ -33,7 +33,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
       <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
       <br></br>
-      <p className="text-sm"> Última atualização: 14-06-2025 [18] </p>
+      <p className="text-sm"> Última atualização: 14-06-2025 [19] </p>
     </div>
   );
 }
@@ -196,9 +196,9 @@ function CalculadoraGET() {
 
           <br></br>
 
-          <ul>
+          {/* <ul>
             <li className="text-sm">
-            🛋️ <b>Sedentário</b> <br></br> Pouco ou nenhum exercício: TMB × 1.2</li>
+            🛋️ <b>Sedentário</b> <br></br>  Pouco ou nenhum exercício: TMB × 1.2</li>
             <li className="text-sm">
             🚶 <b>Levemente ativo</b> <br></br> Exercício leve 1-3 dias/semana: TMB × 1.375</li>
             <li className="text-sm">
@@ -206,8 +206,37 @@ function CalculadoraGET() {
             <li className="text-sm">
             🏋️ <b>Muito ativo</b> <br></br> Exercício intenso 6-7 dias/semana: TMB × 1.725</li>
             <li className="text-sm">
-            🏆 <b>Extremamente ativo</b> <br></br> Atletas ou trabalho físico intenso: TMB × 1.9</li>
+            🏆 <b>Extremamente ativo</b> <br></br>  Atletas ou trabalho físico intenso: TMB × 1.9</li>
+          </ul> */}
+
+          <ul>
+            <li>
+              🛋️ <strong>Sedentário</strong><br></br>
+              <small>Pouco ou nenhum exercício – <b>TMB × 1.2</b></small>
+            </li>
+            <li>
+              🚶 <strong>Levemente ativo</strong><br></br>
+              <small>Exercício leve (1-3 dias/semana) – <b>TMB × 1.375</b></small>
+            </li>
+            <li>
+              🏃 <strong>Moderadamente ativo</strong><br></br>
+              <small>Exercício moderado (3-5 dias/semana) – <b>TMB × 1.55</b></small>
+            </li>
+            <li>
+              🏋️ <strong>Muito ativo</strong><br></br>
+              <small>Exercício intenso (6-7 dias/semana) – <b>TMB × 1.725</b></small>
+            </li>
+            <li>
+              🏆 <strong>Extremamente ativo</strong><br></br>
+              <small>Atletas ou trabalho físico intenso – <b>TMB × 1.9</b></small>
+            </li>
           </ul>
+
+
+
+
+
+
           
           <br></br>
 

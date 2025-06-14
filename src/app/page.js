@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [11] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [12] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -208,6 +208,8 @@ function CalculadoraGET() {
           🏆 <b>Extremamente ativo</b> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
           </ul>
           
+          <br></br>
+
           <label>
           <p className="mb-4">
           Nível de Atividade Física:
@@ -223,8 +225,8 @@ function CalculadoraGET() {
         
         </div>
 
-      
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
+        {/* type="submit" */}
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg center"> 
           Calcular Gasto Energético
         </button>
 

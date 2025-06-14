@@ -183,11 +183,10 @@ function CalculadoraGET() {
         </div>
 
         <div className="flex flex-col w-full">
-          <label className="text-sm font-semibold">
-          <p className="mb-4">
-          Nível de Atividade Física:
+          <h2 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h2>
+          <p className="text-xl">
+            Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
           </p>
-          </label>
 
           <p className="mb-4">
           🛋️ <strong>Sedentário</strong> (pouco ou nenhum exercício): TMB × 1.2 </p>
@@ -200,6 +199,11 @@ function CalculadoraGET() {
           <p className="mb-4">
           🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </p>
           
+          <label className="text-sm font-semibold">
+          <p className="mb-4">
+          Nível de Atividade Física:
+          </p>
+          </label>
           <select className="border p-2 rounded-md" value={atividade} onChange={(e) => setAtividade(e.target.value)}>
             <option>Sedentário</option>
             <option>Levemente ativo</option>
@@ -210,11 +214,11 @@ function CalculadoraGET() {
         
         </div>
 
-      <div className="items-center">    
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      {/* <div className="items-center">     */}
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg items-center">
         Calcular Gasto Energético
       </button>
-      </div> 
+      {/* </div>  */}
       </form>
 
       {resultado && (

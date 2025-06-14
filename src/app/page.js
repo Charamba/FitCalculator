@@ -33,7 +33,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
       <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
       <br></br>
-      <p className="text-sm"> Última atualização: 14-06-2025 [21] </p>
+      <p className="text-sm"> Última atualização: 14-06-2025 </p>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function IMCCalculator() {
       <h2 className="text-xl font-bold">📏 Calculadora de IMC</h2>
       {/* <p className="text-xl"> */}
       <p>
-        O <strong>Índice de Massa Corporal (IMC) </strong>, é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
+        O <strong>Índice de Massa Corporal (IMC) </strong> é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
       </p>
       <div className="flex flex-col w-full">
         <label>Peso (kg):</label>

@@ -8,7 +8,6 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [14] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -33,6 +32,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Gordura Corporal" && <CalculadoraGordura />}</div>
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
       <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
+      <p className="text-sm"> Última atualização: 14-04-2025 [15] </p>
     </div>
   );
 }
@@ -66,7 +66,7 @@ function IMCCalculator() {
         O <strong>Índice de Massa Corporal (IMC) </strong>, é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
       </p>
       <div className="flex flex-col w-full">
-        <label>Peso (kg)</label>
+        <label>Peso (kg):</label>
         <input
           type="number"
           value={peso}
@@ -75,7 +75,7 @@ function IMCCalculator() {
         />
       </div>
       <div className="flex flex-col w-full">
-        <label>Altura (m)</label>
+        <label>Altura (m):</label>
         <input
           type="number"
           value={altura}

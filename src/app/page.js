@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [13] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [14] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -154,7 +154,7 @@ function CalculadoraGET() {
         A <strong>Taxa Metabólica Basal (TMB)</strong> é a quantidade mínima de energia que o corpo precisa para manter as funções vitais em repouso, como respiração, circulação e temperatura corporal.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 center">
+      {/* <form onSubmit={handleSubmit} className="space-y-4 center"> */}
         <div className="flex flex-col w-full">
           <label>
           Sexo:
@@ -224,11 +224,11 @@ function CalculadoraGET() {
         </div>
 
         {/* type="submit" */}
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg center"> 
+        <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded-lg center"> 
           Calcular Gasto Energético
         </button>
 
-      </form>
+      {/* </form> */}
 
       {resultado && (
         // <div className="mt-6 p-4 border rounded"> 

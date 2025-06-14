@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [2]</p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [3] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -27,10 +27,11 @@ export default function FitCalculator() {
             {item}
           </button>
         ))}
-      </div>
+      </div> 
       <div className="w-full max-w-lg">{tab === "IMC" && <IMCCalculator />}</div>
       <div className="w-full max-w-lg">{tab === "Gasto Energético" && <CalculadoraGET />}</div>
       <div className="w-full max-w-lg">{tab === "Gordura Corporal" && <CalculadoraGordura />}</div>
+      <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
     </div>
   );
 }
@@ -337,6 +338,64 @@ function CalculadoraGordura() {
         <div className="mt-6 p-4 border rounded">
           <h2>Seu percentual de gordura corporal é:</h2>
           <h3>{gordura.toFixed(2)} %</h3>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function CalculadoraPesoIdeal() {
+  const [sexo, setSexo] = useState('Homem')
+  const [altura, setAltura] = useState(1.70)
+  const [pesoIdeal, setPesoIdeal] = useState(null)
+
+  function calcularPesoIdeal() {
+    const alturaCm = altura * 100
+    const alturaPolegadas = alturaCm / 2.54
+
+    let resultado = 0
+
+    if (sexo === 'Homem') {
+      resultado = 50 + (2.3 * (alturaPolegadas - 60))
+    } else {
+      resultado = 45.5 + (2.3 * (alturaPolegadas - 60))
+    }
+
+    setPesoIdeal(resultado)
+  }
+
+  return (
+    <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
+      <h1>🏋️ Calculadora de Peso Ideal</h1>
+
+      <div>
+        <label>Sexo:</label>
+        <select value={sexo} onChange={(e) => setSexo(e.target.value)}>
+          <option value="Homem">Homem</option>
+          <option value="Mulher">Mulher</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Altura (m):</label>
+        <input
+          type="number"
+          step="0.01"
+          min="0.5"
+          max="2.5"
+          value={altura}
+          onChange={(e) => setAltura(parseFloat(e.target.value))}
+        />
+      </div>
+
+      <div className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
+        <button onClick={calcularPesoIdeal}>Calcular Peso Ideal</button>
+      </div>
+
+      {pesoIdeal !== null && (
+        <div className="mt-6 p-4 border rounded">
+          <h2>Seu peso ideal é:</h2>
+          <h3>{pesoIdeal.toFixed(2)} kg</h3>
         </div>
       )}
     </div>

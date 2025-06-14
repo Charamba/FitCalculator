@@ -30,6 +30,7 @@ export default function FitCalculator() {
       </div>
       <div className="w-full max-w-lg">{tab === "IMC" && <IMCCalculator />}</div>
       <div className="w-full max-w-lg">{tab === "Gasto Energético" && <CalculadoraGET />}</div>
+      <div className="w-full max-w-lg">{tab === "Gordura Corporal" && <CalculadoraGordura />}</div>
     </div>
   );
 }
@@ -89,8 +90,8 @@ function IMCCalculator() {
         <div className="text-center">
           <h3 className="text-lg font-semibold">Seu IMC é:</h3>
           <p className="text-2xl font-bold">{imc} kg/m²</p>
-          <p className="text-md mt-2 font-medium">Status: {status}</p>
-          //<p className="text-2xl font-medium">Status: {status}</p>
+          {/* <p className="text-md mt-2 font-medium">Status: {status}</p> */}
+          <p className="text-2xl font-medium">Status: {status}</p>
         </div>
       )}
     </div>
@@ -186,6 +187,7 @@ function CalculadoraGET() {
           <h2 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h2>
           <p className="text-xl">
             Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
+
           </p>
 
           <p className="mb-4">
@@ -215,7 +217,7 @@ function CalculadoraGET() {
         </div>
 
       {/* <div className="items-center">     */}
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg items-center">
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
         Calcular Gasto Energético
       </button>
       {/* </div>  */}
@@ -235,4 +237,119 @@ function CalculadoraGET() {
       )}
     </div>
   );
+}
+
+function CalculadoraGordura() {
+  const [sexo, setSexo] = useState('Homem')
+  const [altura, setAltura] = useState(1.70)
+  const [pescoco, setPescoco] = useState(38)
+  const [cintura, setCintura] = useState(90)
+  const [quadril, setQuadril] = useState(100)
+  const [gordura, setGordura] = useState<number | null>(null)
+
+  function calcularGordura() {
+    const alturaCm = altura * 100
+
+    if (sexo === 'Homem') {
+      const resultado =
+        86.01 * Math.log10(cintura - pescoco) -
+        70.041 * Math.log10(alturaCm) +
+        36.76
+      setGordura(resultado)
+    } else {
+      const resultado =
+        163.205 * Math.log10(cintura + quadril - pescoco) -
+        97.684 * Math.log10(alturaCm) -
+        78.387
+      setGordura(resultado)
+    }
+  }
+
+  return (
+    <div className="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-md">
+      <h1 className="text-2xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h1>
+
+      <div className="mb-4">
+        <label className="block font-semibold mb-1">Sexo</label>
+        <select
+          value={sexo}
+          onChange={(e) => setSexo(e.target.value)}
+          className="w-full border rounded px-3 py-2"
+        >
+          <option value="Homem">Homem</option>
+          <option value="Mulher">Mulher</option>
+        </select>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block font-semibold mb-1">Altura (m)</label>
+          <input
+            type="number"
+            min={0.5}
+            max={2.5}
+            step={0.01}
+            value={altura}
+            onChange={(e) => setAltura(parseFloat(e.target.value))}
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
+
+        <div>
+          <label className="block font-semibold mb-1">Pescoço (cm)</label>
+          <input
+            type="number"
+            min={20}
+            max={70}
+            step={0.1}
+            value={pescoco}
+            onChange={(e) => setPescoco(parseFloat(e.target.value))}
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
+
+        <div>
+          <label className="block font-semibold mb-1">Cintura (cm)</label>
+          <input
+            type="number"
+            min={50}
+            max={200}
+            step={0.1}
+            value={cintura}
+            onChange={(e) => setCintura(parseFloat(e.target.value))}
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
+
+        {sexo === 'Mulher' && (
+          <div>
+            <label className="block font-semibold mb-1">Quadril (cm)</label>
+            <input
+              type="number"
+              min={50}
+              max={200}
+              step={0.1}
+              value={quadril}
+              onChange={(e) => setQuadril(parseFloat(e.target.value))}
+              className="w-full border rounded px-3 py-2"
+            />
+          </div>
+        )}
+      </div>
+
+      <button
+        onClick={calcularGordura}
+        className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg"
+      >
+        Calcular Gordura Corporal
+      </button>
+
+      {gordura !== null && (
+        <div className="mt-6 text-center">
+          <h2 className="text-lg font-semibold">Seu percentual de gordura corporal é:</h2>
+          <p className="text-3xl font-bold mt-2">{gordura.toFixed(2)}%</p>
+        </div>
+      )}
+    </div>
+  )
 }

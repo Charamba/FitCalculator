@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [6] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [7] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -65,7 +65,7 @@ function IMCCalculator() {
         O <strong>Índice de Massa Corporal (IMC) </strong>, é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
       </p>
       <div className="flex flex-col w-full">
-        <label className="text-sm font-semibold">Peso (kg)</label>
+        <label>Peso (kg)</label>
         <input
           type="number"
           value={peso}
@@ -74,7 +74,7 @@ function IMCCalculator() {
         />
       </div>
       <div className="flex flex-col w-full">
-        <label className="text-sm font-semibold">Altura (m)</label>
+        <label>Altura (m)</label>
         <input
           type="number"
           value={altura}
@@ -90,10 +90,10 @@ function IMCCalculator() {
       </button>
       {imc && (
         <div className="text-center">
-          <h3 className="text-lg font-semibold">Seu IMC é:</h3>
+          <h3 className="text-lg">Seu IMC é:</h3>
           <p className="text-2xl font-bold">{imc} kg/m²</p>
           {/* <p className="text-md mt-2 font-medium">Status: {status}</p> */}
-          <p className="text-2xl font-medium">Status: {status}</p>
+          <p className="text-2xl font-medium">{status}</p>
         </div>
       )}
     </div>
@@ -155,7 +155,7 @@ function CalculadoraGET() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col w-full">
-          <label className="text-sm font-semibold">
+          <label>
           Sexo:
           </label>
           <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
@@ -165,21 +165,21 @@ function CalculadoraGET() {
         </div>
 
         <div className="flex flex-col w-full">
-          <label className="text-sm font-semibold">
+          <label>
           Peso (kg):
           </label>                                        
           <input type="number" min="10" max="300" step="0.1" className="border p-2 rounded-md" value={peso} onChange={(e) => setPeso(e.target.value)} />
         </div>
 
         <div className="flex flex-col w-full">
-          <label className="text-sm font-semibold">
+          <label>
           Altura (m):
           </label>
           <input type="number" min="0.5" max="2.5" step="0.01" className="border p-2 rounded-md" value={altura} onChange={(e) => setAltura(e.target.value)} />
         </div>
 
         <div className="flex flex-col w-full">
-          <label className="text-sm font-semibold">
+          <label>
           Idade:
           </label>
           <input type="number" min="10" max="120" step="1" className="border p-2 rounded-md" value={idade} onChange={(e) => setIdade(e.target.value)} />
@@ -205,7 +205,7 @@ function CalculadoraGET() {
           🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
           </ul>
           
-          <label className="text-sm font-semibold">
+          <label>
           <p className="mb-4">
           Nível de Atividade Física:
           </p>
@@ -228,7 +228,8 @@ function CalculadoraGET() {
       </form>
 
       {resultado && (
-        <div className="mt-6 p-4 border rounded">
+        // <div className="mt-6 p-4 border rounded"> 
+        <div className="text-center">
           {resultado.erro ? (
             <p className="text-red-600">{resultado.erro}</p>
           ) : (
@@ -273,7 +274,7 @@ function CalculadoraGordura() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1>⚖️ Calculadora de Gordura Corporal</h1>
+      <h1 className="text-2xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h1>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -341,11 +342,19 @@ function CalculadoraGordura() {
         <button onClick={calcularGordura}>Calcular Gordura Corporal</button>
       </div>
 
+
+
+
+
       {gordura !== null && (
-        <div className="mt-6 p-4 border rounded">
-          <h2>Seu percentual de gordura corporal é:</h2>
-          <h3>{gordura.toFixed(2)} %</h3>
+        <div className="text-center">
+          <h3 className="text-lg">Seu percentual de gordura corporal é:</h3>
+          <p className="text-2xl font-bold">{gordura.toFixed(2)} %</p>
         </div>
+        // <div className="mt-6 p-4 border rounded">
+        //   <h2>Seu percentual de gordura corporal é:</h2>
+        //   <h3>{gordura.toFixed(2)} %</h3>
+        // </div>
       )}
     </div>
   )
@@ -373,7 +382,7 @@ function CalculadoraPesoIdeal() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1>🏋️ Calculadora de Peso Ideal</h1>
+      <h1 className="text-2xl font-bold mb-4">🏋️ Calculadora de Peso Ideal</h1>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -401,10 +410,14 @@ function CalculadoraPesoIdeal() {
       </div>
 
       {pesoIdeal !== null && (
-        <div className="mt-6 p-4 border rounded">
-          <h2>Seu peso ideal é:</h2>
-          <h3>{pesoIdeal.toFixed(2)} kg</h3>
+        <div className="text-center">
+          <h3 className="text-lg">Seu peso ideal é:</h3>
+          <p className="text-2xl font-bold">{pesoIdeal.toFixed(2)} kg</p>
         </div>
+        // <div className="mt-6 p-4 border rounded">
+        //   <h2>Seu peso ideal é:</h2>
+        //   <h3>{pesoIdeal.toFixed(2)} kg</h3>
+        // </div>
       )}
     </div>
   )
@@ -446,7 +459,7 @@ function CalculadoraMacronutrientes() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1>🍎 Calculadora de Macronutrientes</h1>
+      <h1 className="text-2xl font-bold mb-4">🍎 Calculadora de Macronutrientes</h1>
 
       <div className="flex flex-col w-full">
         <label>Calorias diárias recomendadas (kcal):</label>
@@ -475,8 +488,8 @@ function CalculadoraMacronutrientes() {
       </div>
 
       {resultado && (
-        <div className="mt-6 p-4 border rounded">
-          <h2>Quantidades:</h2>
+        <div className="text-center">
+          <h3 className="text-lg">Quantidades:</h3>
           <ul>
             <li>🥖 Carboidratos: <b>{resultado.carbs.toFixed(2)} g</b></li>
             <li>🍗 Proteínas: <b>{resultado.proteinas.toFixed(2)} g</b></li>

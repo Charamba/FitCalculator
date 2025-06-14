@@ -33,7 +33,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
       <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
       <br></br>
-      <p className="text-sm"> Última atualização: 14-06-2025 [19] </p>
+      <p className="text-sm"> Última atualização: 14-06-2025 [21] </p>
     </div>
   );
 }
@@ -212,23 +212,23 @@ function CalculadoraGET() {
           <ul>
             <li>
               🛋️ <strong>Sedentário</strong><br></br>
-              <small>Pouco ou nenhum exercício – <i>TMB × 1.2</i></small>
+              <small><i>Pouco ou nenhum exercício: TMB × 1.2</i></small>
             </li>
             <li>
               🚶 <strong>Levemente ativo</strong><br></br>
-              <small>Exercício leve (1-3 dias/semana) – <i>TMB × 1.375</i></small>
+              <small><i>Exercício leve (1-3 dias/semana): TMB × 1.375</i></small>
             </li>
             <li>
               🏃 <strong>Moderadamente ativo</strong><br></br>
-              <small>Exercício moderado (3-5 dias/semana) – <i>TMB × 1.55</i></small>
+              <small><i>Exercício moderado (3-5 dias/semana): TMB × 1.55</i></small>
             </li>
             <li>
               🏋️ <strong>Muito ativo</strong><br></br>
-              <small>Exercício intenso (6-7 dias/semana) – <i>TMB × 1.725</i></small>
+              <small><i>Exercício intenso (6-7 dias/semana): TMB × 1.725</i></small>
             </li>
             <li>
               🏆 <strong>Extremamente ativo</strong><br></br>
-              <small>Atletas ou trabalho físico intenso – <i>TMB × 1.9</i></small>
+              <small><i>Atletas ou trabalho físico intenso: TMB × 1.9</i></small>
             </li>
           </ul>
 

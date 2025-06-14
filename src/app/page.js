@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [4] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [5] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -275,7 +275,7 @@ function CalculadoraGordura() {
 
       <div>
         <label>Sexo:</label>
-        <select value={sexo} onChange={(e) => setSexo(e.target.value)}>
+        <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
           <option value="Homem">Homem</option>
           <option value="Mulher">Mulher</option>
         </select>
@@ -284,6 +284,7 @@ function CalculadoraGordura() {
       <div>
         <label>Altura (m):</label>
         <input
+          className="border p-2 rounded-md"
           type="number"
           step="0.01"
           min="0.5"
@@ -296,6 +297,7 @@ function CalculadoraGordura() {
       <div>
         <label>Circunferência do Pescoço (cm):</label>
         <input
+          className="border p-2 rounded-md"
           type="number"
           step="0.1"
           min="20"
@@ -308,6 +310,7 @@ function CalculadoraGordura() {
       <div>
         <label>Circunferência da Cintura (cm):</label>
         <input
+          className="border p-2 rounded-md"
           type="number"
           step="0.1"
           min="50"
@@ -321,6 +324,7 @@ function CalculadoraGordura() {
         <div>
           <label>Circunferência do Quadril (cm):</label>
           <input
+            className="border p-2 rounded-md"
             type="number"
             step="0.1"
             min="50"
@@ -371,7 +375,7 @@ function CalculadoraPesoIdeal() {
 
       <div>
         <label>Sexo:</label>
-        <select value={sexo} onChange={(e) => setSexo(e.target.value)}>
+        <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
           <option value="Homem">Homem</option>
           <option value="Mulher">Mulher</option>
         </select>
@@ -380,6 +384,7 @@ function CalculadoraPesoIdeal() {
       <div>
         <label>Altura (m):</label>
         <input
+          className="border p-2 rounded-md"
           type="number"
           step="0.01"
           min="0.5"
@@ -444,6 +449,7 @@ function CalculadoraMacronutrientes() {
       <div>
         <label>Calorias diárias recomendadas (kcal):</label>
         <input
+          className="border p-2 rounded-md"
           type="number"
           value={calorias}
           min={500}
@@ -455,7 +461,7 @@ function CalculadoraMacronutrientes() {
 
       <div>
         <label>Objetivo:</label>
-        <select value={objetivo} onChange={(e) => setObjetivo(e.target.value)}>
+        <select className="border p-2 rounded-md" value={objetivo} onChange={(e) => setObjetivo(e.target.value)}>
           <option value="Manutenção">Manutenção</option>
           <option value="Ganho de Massa">Ganho de Massa</option>
           <option value="Perda de Peso">Perda de Peso</option>

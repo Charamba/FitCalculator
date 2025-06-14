@@ -104,9 +104,9 @@ function IMCCalculator() {
 
 function CalculadoraGET() {
   const [sexo, setSexo] = useState('Homem');
-  const [peso, setPeso] = useState('');
-  const [altura, setAltura] = useState('');
-  const [idade, setIdade] = useState('');
+  const [peso, setPeso] = useState(70);
+  const [altura, setAltura] = useState(1.75);
+  const [idade, setIdade] = useState(25);
   const [atividade, setAtividade] = useState('Sedentário');
   const [resultado, setResultado] = useState(null);
 

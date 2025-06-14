@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [12] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [13] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -154,7 +154,7 @@ function CalculadoraGET() {
         A <strong>Taxa Metabólica Basal (TMB)</strong> é a quantidade mínima de energia que o corpo precisa para manter as funções vitais em repouso, como respiração, circulação e temperatura corporal.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 center">
         <div className="flex flex-col w-full">
           <label>
           Sexo:
@@ -211,9 +211,7 @@ function CalculadoraGET() {
           <br></br>
 
           <label>
-          <p className="mb-4">
           Nível de Atividade Física:
-          </p>
           </label>
           <select className="border p-2 rounded-md" value={atividade} onChange={(e) => setAtividade(e.target.value)}>
             <option>Sedentário</option>

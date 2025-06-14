@@ -198,15 +198,15 @@ function CalculadoraGET() {
 
           <ul>
           <li className="text-sm">
-          🛋️ <b>Sedentário</b> pouco ou nenhum exercício: TMB × 1.2</li>
+          🛋️ <b>Sedentário</b> <br></br> pouco ou nenhum exercício: TMB × 1.2</li>
           <li className="text-sm">
-          🚶 <b>Levemente ativo</b> exercício leve 1-3 dias/semana: TMB × 1.375</li>
+          🚶 <b>Levemente ativo</b> <br></br> exercício leve 1-3 dias/semana: TMB × 1.375</li>
           <li className="text-sm">
-          🏃 <b>Moderadamente ativo</b> exercício moderado 3-5 dias/semana: TMB × 1.55</li>
+          🏃 <b>Moderadamente ativo</b> <br></br> exercício moderado 3-5 dias/semana: TMB × 1.55</li>
           <li className="text-sm">
-          🏋️ <b>Muito ativo</b> exercício intenso 6-7 dias/semana: TMB × 1.725</li>
+          🏋️ <b>Muito ativo</b> <br></br> exercício intenso 6-7 dias/semana: TMB × 1.725</li>
           <li className="text-sm">
-          🏆 <b>Extremamente ativo</b> atletas ou trabalho físico intenso: TMB × 1.9</li>
+          🏆 <b>Extremamente ativo</b> <br></br> atletas ou trabalho físico intenso: TMB × 1.9</li>
           </ul>
           
           <br></br>

@@ -189,10 +189,8 @@ function CalculadoraGET() {
         <div className="flex flex-col w-full">
           <h3 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h3>
           <p>
-            Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
+            Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida: \n
           </p>
-
-          <br>
 
           <ul>
           <li className="mb-4">

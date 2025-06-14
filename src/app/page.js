@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [9] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [10] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -147,7 +147,7 @@ function CalculadoraGET() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h2 className="text-2xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h2>
+      <h2 className="text-xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h2>
 
       <h3 className="text-xl font-semibold">🔥 Taxa Metabólica Basal (TMB)</h3>
       <p>
@@ -188,6 +188,7 @@ function CalculadoraGET() {
 
         <div className="flex flex-col w-full">
           <h3 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h3>
+          <br></br>
           <p>
             Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
           </p>
@@ -195,15 +196,15 @@ function CalculadoraGET() {
           <br></br>
 
           <ul>
-          <li className="mb-3">
+          <li className="mb-2">
           🛋️ <b>Sedentário</b> (pouco ou nenhum exercício): TMB × 1.2 </li>
-          <li className="mb-3">
+          <li className="mb-2">
           🚶 <b>Levemente ativo</b> (exercício leve 1-3 dias/semana): TMB × 1.375 </li>
-          <li className="mb-3">
+          <li className="mb-2">
           🏃 <b>Moderadamente ativo</b> (exercício moderado 3-5 dias/semana): TMB × 1.55 </li>
-          <li className="mb-3">
+          <li className="mb-2">
           🏋️ <b>Muito ativo</b> (exercício intenso 6-7 dias/semana): TMB × 1.725 </li>
-          <li className="mb-3">
+          <li className="mb-2">
           🏆 <b>Extremamente ativo</b> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
           </ul>
           
@@ -276,7 +277,7 @@ function CalculadoraGordura() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h2 className="text-2xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h2>
+      <h2 className="text-xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h2>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -384,7 +385,7 @@ function CalculadoraPesoIdeal() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h2 className="text-2xl font-bold mb-4">🏋️ Calculadora de Peso Ideal</h2>
+      <h2 className="text-xl font-bold mb-4">🏋️ Calculadora de Peso Ideal</h2>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -461,7 +462,7 @@ function CalculadoraMacronutrientes() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h2 className="text-2xl font-bold mb-4">🍎 Calculadora de Macronutrientes</h2>
+      <h2 className="text-xl font-bold mb-4">🍎 Calculadora de Macronutrientes</h2>
 
       <div className="flex flex-col w-full">
         <label>Calorias diárias recomendadas (kcal):</label>

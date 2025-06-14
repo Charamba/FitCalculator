@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [5] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [6] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -192,16 +192,18 @@ function CalculadoraGET() {
 
           </p>
 
-          <p className="mb-4">
-          🛋️ <strong>Sedentário</strong> (pouco ou nenhum exercício): TMB × 1.2 </p>
-          <p className="mb-4">
-          🚶 <strong>Levemente ativo</strong> (exercício leve 1-3 dias/semana): TMB × 1.375 </p>
-          <p className="mb-4">
-          🏃 <strong>Moderadamente ativo</strong> (exercício moderado 3-5 dias/semana): TMB × 1.55 </p>
-          <p className="mb-4">
-          🏋️ <strong>Muito ativo</strong> (exercício intenso 6-7 dias/semana): TMB × 1.725 </p>
-          <p className="mb-4">
-          🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </p>
+          <ul>
+          <li className="mb-4">
+          🛋️ <strong>Sedentário</strong> (liouco ou nenhum exercício): TMB × 1.2 </li>
+          <li className="mb-4">
+          🚶 <strong>Levemente ativo</strong> (exercício leve 1-3 dias/semana): TMB × 1.375 </li>
+          <li className="mb-4">
+          🏃 <strong>Moderadamente ativo</strong> (exercício moderado 3-5 dias/semana): TMB × 1.55 </li>
+          <li className="mb-4">
+          🏋️ <strong>Muito ativo</strong> (exercício intenso 6-7 dias/semana): TMB × 1.725 </li>
+          <li className="mb-4">
+          🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
+          </ul>
           
           <label className="text-sm font-semibold">
           <p className="mb-4">
@@ -273,7 +275,7 @@ function CalculadoraGordura() {
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h1>⚖️ Calculadora de Gordura Corporal</h1>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Sexo:</label>
         <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
           <option value="Homem">Homem</option>
@@ -281,7 +283,7 @@ function CalculadoraGordura() {
         </select>
       </div>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Altura (m):</label>
         <input
           className="border p-2 rounded-md"
@@ -294,7 +296,7 @@ function CalculadoraGordura() {
         />
       </div>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Circunferência do Pescoço (cm):</label>
         <input
           className="border p-2 rounded-md"
@@ -307,7 +309,7 @@ function CalculadoraGordura() {
         />
       </div>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Circunferência da Cintura (cm):</label>
         <input
           className="border p-2 rounded-md"
@@ -321,7 +323,7 @@ function CalculadoraGordura() {
       </div>
 
       {sexo === 'Mulher' && (
-        <div>
+        <div className="flex flex-col w-full">
           <label>Circunferência do Quadril (cm):</label>
           <input
             className="border p-2 rounded-md"
@@ -373,7 +375,7 @@ function CalculadoraPesoIdeal() {
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h1>🏋️ Calculadora de Peso Ideal</h1>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Sexo:</label>
         <select className="border p-2 rounded-md" value={sexo} onChange={(e) => setSexo(e.target.value)}>
           <option value="Homem">Homem</option>
@@ -381,7 +383,7 @@ function CalculadoraPesoIdeal() {
         </select>
       </div>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Altura (m):</label>
         <input
           className="border p-2 rounded-md"
@@ -446,7 +448,7 @@ function CalculadoraMacronutrientes() {
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h1>🍎 Calculadora de Macronutrientes</h1>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Calorias diárias recomendadas (kcal):</label>
         <input
           className="border p-2 rounded-md"
@@ -459,7 +461,7 @@ function CalculadoraMacronutrientes() {
         />
       </div>
 
-      <div>
+      <div className="flex flex-col w-full">
         <label>Objetivo:</label>
         <select className="border p-2 rounded-md" value={objetivo} onChange={(e) => setObjetivo(e.target.value)}>
           <option value="Manutenção">Manutenção</option>

@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [7] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [8] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -61,7 +61,8 @@ function IMCCalculator() {
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h2 className="text-xl font-bold">📏 Calculadora de IMC</h2>
-      <p className="text-xl">
+      {/* <p className="text-xl"> */}
+      <p>
         O <strong>Índice de Massa Corporal (IMC) </strong>, é um parâmetro utilizado para avaliar se seu peso está dentro do valor ideal para a sua altura. O IMC é calculado dividindo seu peso pelo o quadrado da sua altura.
       </p>
       <div className="flex flex-col w-full">
@@ -146,10 +147,10 @@ function CalculadoraGET() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1 className="text-2xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h1>
+      <h2 className="text-2xl font-bold mb-4">🔋 Calculadora de Gasto Energético</h2>
 
-      <h2 className="text-xl font-semibold">🔥 Taxa Metabólica Basal (TMB)</h2>
-      <p className="text-xl">
+      <h3 className="text-xl font-semibold">🔥 Taxa Metabólica Basal (TMB)</h3>
+      <p>
         A <strong>Taxa Metabólica Basal (TMB)</strong> é a quantidade mínima de energia que o corpo precisa para manter as funções vitais em repouso, como respiração, circulação e temperatura corporal.
       </p>
 
@@ -186,11 +187,12 @@ function CalculadoraGET() {
         </div>
 
         <div className="flex flex-col w-full">
-          <h2 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h2>
-          <p className="text-xl">
+          <h3 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h3>
+          <p>
             Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
-
           </p>
+
+          <br>
 
           <ul>
           <li className="mb-4">
@@ -220,11 +222,11 @@ function CalculadoraGET() {
         
         </div>
 
-      {/* <div className="items-center">     */}
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
-        Calcular Gasto Energético
-      </button>
-      {/* </div>  */}
+      
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
+          Calcular Gasto Energético
+        </button>
+
       </form>
 
       {resultado && (
@@ -274,7 +276,7 @@ function CalculadoraGordura() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1 className="text-2xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h1>
+      <h2 className="text-2xl font-bold mb-4">⚖️ Calculadora de Gordura Corporal</h2>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -382,7 +384,7 @@ function CalculadoraPesoIdeal() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1 className="text-2xl font-bold mb-4">🏋️ Calculadora de Peso Ideal</h1>
+      <h2 className="text-2xl font-bold mb-4">🏋️ Calculadora de Peso Ideal</h2>
 
       <div className="flex flex-col w-full">
         <label>Sexo:</label>
@@ -459,7 +461,7 @@ function CalculadoraMacronutrientes() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
-      <h1 className="text-2xl font-bold mb-4">🍎 Calculadora de Macronutrientes</h1>
+      <h2 className="text-2xl font-bold mb-4">🍎 Calculadora de Macronutrientes</h2>
 
       <div className="flex flex-col w-full">
         <label>Calorias diárias recomendadas (kcal):</label>

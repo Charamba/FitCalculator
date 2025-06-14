@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [2]</p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -268,7 +268,7 @@ function CalculadoraGordura() {
   }
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
+    <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
       <h1>⚖️ Calculadora de Gordura Corporal</h1>
 
       <div>
@@ -329,12 +329,12 @@ function CalculadoraGordura() {
         </div>
       )}
 
-      <div style={{ marginTop: '20px' }}>
+      <div className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
         <button onClick={calcularGordura}>Calcular Gordura Corporal</button>
       </div>
 
       {gordura !== null && (
-        <div style={{ marginTop: '20px' }}>
+        <div className="mt-6 p-4 border rounded">
           <h2>Seu percentual de gordura corporal é:</h2>
           <h3>{gordura.toFixed(2)} %</h3>
         </div>

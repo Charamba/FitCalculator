@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [3] sgdhsagdgjsag </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [4] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -32,6 +32,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Gasto Energético" && <CalculadoraGET />}</div>
       <div className="w-full max-w-lg">{tab === "Gordura Corporal" && <CalculadoraGordura />}</div>
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
+      <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
     </div>
   );
 }
@@ -396,6 +397,83 @@ function CalculadoraPesoIdeal() {
         <div className="mt-6 p-4 border rounded">
           <h2>Seu peso ideal é:</h2>
           <h3>{pesoIdeal.toFixed(2)} kg</h3>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function CalculadoraMacronutrientes() {
+  const [calorias, setCalorias] = useState(2000)
+  const [objetivo, setObjetivo] = useState('Manutenção')
+  const [resultado, setResultado] = useState(null)
+
+  function calcularMacros() {
+    let carbsPercent, protPercent, gordPercent
+
+    if (objetivo === 'Manutenção') {
+      carbsPercent = 50
+      protPercent = 20
+      gordPercent = 30
+    } else if (objetivo === 'Ganho de Massa') {
+      carbsPercent = 40
+      protPercent = 30
+      gordPercent = 30
+    } else {
+      // Perda de Peso
+      carbsPercent = 20
+      protPercent = 40
+      gordPercent = 40
+    }
+
+    const carbsG = (calorias * carbsPercent / 100) / 4
+    const protG = (calorias * protPercent / 100) / 4
+    const gordG = (calorias * gordPercent / 100) / 9
+
+    setResultado({
+      carbs: carbsG,
+      proteinas: protG,
+      gorduras: gordG
+    })
+  }
+
+  return (
+    <div className="flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg w-full">
+      <h1>🍎 Calculadora de Macronutrientes</h1>
+
+      <div>
+        <label>Calorias diárias recomendadas (kcal):</label>
+        <input
+          type="number"
+          value={calorias}
+          min={500}
+          max={5000}
+          step={10}
+          onChange={(e) => setCalorias(Number(e.target.value))}
+        />
+      </div>
+
+      <div>
+        <label>Objetivo:</label>
+        <select value={objetivo} onChange={(e) => setObjetivo(e.target.value)}>
+          <option value="Manutenção">Manutenção</option>
+          <option value="Ganho de Massa">Ganho de Massa</option>
+          <option value="Perda de Peso">Perda de Peso</option>
+        </select>
+      </div>
+
+      <div className="bg-blue-500 text-white px-4 py-2 rounded-lg center">
+        <button onClick={calcularMacros}>Calcular Macronutrientes</button>
+      </div>
+
+      {resultado && (
+        <div className="mt-6 p-4 border rounded">
+          <h2>Quantidades:</h2>
+          <ul>
+            <li>🥖 Carboidratos: <b>{resultado.carbs.toFixed(2)} g</b></li>
+            <li>🍗 Proteínas: <b>{resultado.proteinas.toFixed(2)} g</b></li>
+            <li>🥑 Gorduras: <b>{resultado.gorduras.toFixed(2)} g</b></li>
+          </ul>
         </div>
       )}
     </div>

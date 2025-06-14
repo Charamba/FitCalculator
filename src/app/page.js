@@ -8,7 +8,7 @@ export default function FitCalculator() {
   return (
     <div className="flex flex-col items-center p-4 w-full">
       <h1 className="text-2xl font-bold mb-4">💪 Fit Calculator</h1>
-      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [8] </p>
+      <p className="text-2xl font-medium"> Última atualização: 14-04-2025 [9] </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4 w-full">
         {[
           "IMC",
@@ -189,20 +189,22 @@ function CalculadoraGET() {
         <div className="flex flex-col w-full">
           <h3 className="text-xl font-semibold">⚡ Multiplique pelo Nível de Atividade Física </h3>
           <p>
-            Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida: \n
+            Depois de calcular a TMB, multiplicamos esse valor por um fator de atividade para obter o <strong>Gasto Energético Total (GET)</strong>, que representa o total de calorias diárias considerando seu estilo de vida:
           </p>
 
+          <br></br>
+
           <ul>
-          <li className="mb-4">
-          🛋️ <strong>Sedentário</strong> (liouco ou nenhum exercício): TMB × 1.2 </li>
-          <li className="mb-4">
-          🚶 <strong>Levemente ativo</strong> (exercício leve 1-3 dias/semana): TMB × 1.375 </li>
-          <li className="mb-4">
-          🏃 <strong>Moderadamente ativo</strong> (exercício moderado 3-5 dias/semana): TMB × 1.55 </li>
-          <li className="mb-4">
-          🏋️ <strong>Muito ativo</strong> (exercício intenso 6-7 dias/semana): TMB × 1.725 </li>
-          <li className="mb-4">
-          🏆 <strong>Extremamente ativo</strong> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
+          <li className="mb-3">
+          🛋️ <b>Sedentário</b> (pouco ou nenhum exercício): TMB × 1.2 </li>
+          <li className="mb-3">
+          🚶 <b>Levemente ativo</b> (exercício leve 1-3 dias/semana): TMB × 1.375 </li>
+          <li className="mb-3">
+          🏃 <b>Moderadamente ativo</b> (exercício moderado 3-5 dias/semana): TMB × 1.55 </li>
+          <li className="mb-3">
+          🏋️ <b>Muito ativo</b> (exercício intenso 6-7 dias/semana): TMB × 1.725 </li>
+          <li className="mb-3">
+          🏆 <b>Extremamente ativo</b> (atletas ou trabalho físico intenso): TMB × 1.9 </li>
           </ul>
           
           <label>

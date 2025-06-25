@@ -21,12 +21,25 @@ export default function RootLayout({ children }) {
     <html lang="pt">
       <head>
         {/* AdSense Script */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3203232658892774" crossorigin="anonymous"></script>
+        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3203232658892774" crossorigin="anonymous"></script> */}
       </head>
     
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* AdsTerra Script */}
+        <script type="text/javascript">
+        	atOptions = {
+        		'key' : 'd43c949fd0a770dd7fdb9d528b907c71',
+        		'format' : 'iframe',
+        		'height' : 600,
+        		'width' : 160,
+        		'params' : {}
+        	};
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/d43c949fd0a770dd7fdb9d528b907c71/invoke.js"></script>
+
+
         {children}
       </body>
     </html>

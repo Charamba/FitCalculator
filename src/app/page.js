@@ -33,7 +33,7 @@ export default function FitCalculator() {
       <div className="w-full max-w-lg">{tab === "Peso Ideal" && <CalculadoraPesoIdeal />}</div>
       <div className="w-full max-w-lg">{tab === "Macronutrientes" && <CalculadoraMacronutrientes />}</div>
       <br></br>
-      <p className="text-sm"> Última atualização: 14-06-2025 </p>
+      <p className="text-sm"> Última atualização: 24-06-2025 </p>
     </div>
   );
 }
